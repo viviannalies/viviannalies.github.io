@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html>
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible"
+          content="IE=edge" />
+    <title>Company name-Checkout</title>
+    <meta name="description"
+          content="" />
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+          crossorigin="anonymous" />
+
+    <link rel="stylesheet"
+          href="css/order-accordion.css" />
+    <link rel="stylesheet"
+          href="css/layout.css" />
+    <link rel="stylesheet"
+          href="css/order-details.css" />
+</head>
+
+<body>
+    <main id="main"
+          class="container-fluid">
+
+        <div id="main-row"
+             class="row">
+
+            <section id="brand"
+                     class="col-2 position-fixed">
+                <header id="brand-head">
+                    <a class="navbar-brand col-12"
+                       href="#">
+                        <img class="img-fluid"
+                             src="image/logo.svg"
+                             alt="Mr. Fox Winery Shop logo">
+                    </a>
+                    <hgroup>
+                        <h1>Hello you!</h1>
+                        <h4>Warmly welcome!</h4>
+                    </hgroup>
+                </header><!-- END #brand-head -->
+            </section><!-- END #brand -->
+
+            <div id="mr-fox">
+                <img class="img-fluid"
+                     src="image/mr_fox-01.svg"
+                     alt="Mr. Fox graphics">
+            </div> <!-- END #mr-fox -->
+
+            <section id="order"
+                     class="col offset-2">
+
+                <div id="order-content"
+                     class="container">
+
+                    <div class="row justify-content-center">
+
+                        <header id="order-header"
+                                class="col-11">
+                            <h2>Ordering</h2>
+                            <p>We need some data for your purchase. It won't take too long, we promise :)</p>
+
+                            <div id="order-cart">
+                                <span class="item-number align-middle">1</span>
+                                <i class="material-icons align-middle cart">shopping_cart</i>
+                                <i class="material-icons align-middle expander">expand_more</i>
+                            </div><!-- END #order-cart -->
+                        </header><!-- END #order-header -->
+
+                        <div id="order-steps-container"
+                             class="col-8">
+
+                            <!--
+                                ***************
+                                ACCORDION START
+                                ***************
+                            -->
+
+                            <div id="order-steps">
+
+                                <!--
+                                    ********************
+                                    STEP 1 - Shooping as
+                                    ********************
+                                -->
+                                <section id="order-step_signin"
+                                         class="card card-step">
+
+                                    <div id="signin-heading"
+                                         class="card-header"
+                                         data-toggle="collapse"
+                                         data-target="#signin-content"
+                                         aria-expanded="true"
+                                         aria-controls="signin-content">
+
+                                        <span class="mb-0 card-title user-select-none">Sign in</span>
+
+                                        <button class="edit-btn btn btn-link d-none"
+                                                data-toggle="collapse"
+                                                data-target="#signin-content"
+                                                aria-expanded="true"
+                                                aria-controls="signin-content">
+                                            edit
+                                        </button>
+
+                                    </div><!-- END #signin-heading -->
+
+                                    <div id="signin-content"
+                                         class="card-content collapse show"
+                                         aria-labelledby="heading-signin"
+                                         data-parent="#order-steps">
+
+                                        <div class="card-body">
+                                            <div class="row">
+
+                                                <div id="guest-or-registration"
+                                                     class="col-6">
+
+                                                    <form action=""
+                                                          data-sidebar="order-detail_personal">
+                                                        <fieldset>
+                                                            <legend class="form-title">
+                                                                Don't have an account yet?
+                                                            </legend>
+                                                            <p>Doesn't matter! You can order as Guest or register
+                                                                during the order.</p>
+
+                                                            <div class="form-group">
+                                                                <label for="name">
+                                                                    Full name
+                                                                </label>
+                                                                <input type="text"
+                                                                       class="form-control"
+                                                                       id="name"
+                                                                       name="name"
+                                                                       placeholder="e.g. Lorenzo Lamas"
+                                                                       autocomplete="on">
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <label for="email">
+                                                                    email address
+                                                                </label>
+                                                                <input type="email"
+                                                                       class="form-control"
+                                                                       id="email"
+                                                                       name="email"
+                                                                       placeholder="e.g. lorenzo.lamas@gmail.com"
+                                                                       autocomplete="on">
+                                                            </div>
+
+                                                            <div class="custom-control custom-radio mt-2">
+                                                                <input class="custom-control-input"
+                                                                       type="radio"
+                                                                       name="signin"
+                                                                       id="guest"
+                                                                       value="guest">
+
+                                                                <label class="custom-control-label"
+                                                                       for="guest">
+                                                                    Shop as Guest
+                                                                </label>
+                                                            </div>
+
+                                                            <div class="custom-control custom-radio">
+                                                                <input class="custom-control-input"
+                                                                       type="radio"
+                                                                       name="signin"
+                                                                       id="registration"
+                                                                       value="registration">
+
+                                                                <label class="custom-control-label"
+                                                                       for="registration">
+                                                                    Register during the process
+                                                                </label>
+                                                            </div>
+                                                        </fieldset>
+                                                    </form>
+
+                                                    <div class="button-container">
+                                                        <button type="button"
+                                                                class="next default-btn btn"
+                                                                data-toggle="collapse"
+                                                                data-target="#address-content"
+                                                                aria-expanded="false"
+                                                                aria-controls="address-content">
+                                                            next
+                                                        </button>
+                                                    </div>
+
+                                                </div><!-- END #guest-or-registration -->
+
+                                                <div id="sign-in-with-account"
+                                                     class="col-6">
+
+                                                    <fieldset>
+                                                        <legend class="form-title">
+                                                            Sign in your account
+                                                        </legend>
+                                                        <p>Do you have an account already? Cool.
+                                                            Sign in to continue the process!</p>
+
+                                                        <form>
+                                                            <div class="form-group">
+                                                                <label for="signinEmail">
+                                                                    email address
+                                                                </label>
+                                                                <input type="email"
+                                                                       class="form-control"
+                                                                       id="signinEmail"
+                                                                       placeholder="e.g. lorenzo.lamas@gmail.com"
+                                                                       autocomplete="on">
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <label for="password">
+                                                                    password
+                                                                </label>
+                                                                <span class="material-icons input-icon">
+                                                                    remove_red_eye
+                                                                </span>
+                                                                <input type="password"
+                                                                       class="form-control"
+                                                                       id="password"
+                                                                       placeholder="Password"
+                                                                       autocomplete="on">
+                                                                <p class="text-right">
+                                                                    <a href="#"
+                                                                       class="text-decoration-none">
+                                                                        Forgot password?
+                                                                    </a>
+                                                                </p>
+                                                            </div>
+                                                        </form>
+                                                    </fieldset>
+
+                                                    <div class="button-container">
+                                                        <button type="submit"
+                                                                class="default-btn btn">
+                                                            sign in
+                                                        </button>
+                                                    </div>
+                                                </div><!-- END #sign-in-with-account -->
+                                            </div><!-- END .row-->
+                                        </div><!-- END .card-body -->
+                                    </div><!-- END #signin-content -->
+                                </section><!-- END #order-step_signin -->
+
+                                <!--
+                                    *****************************
+                                    STEP 2 - Shipping and Billing
+                                    *****************************
+                                -->
+                                <section id="order-step_address"
+                                         class="card card-step">
+
+                                    <div id="address-heading"
+                                         class="card-header disabled"
+                                         data-toggle=""
+                                         data-target="#address-content"
+                                         aria-expanded="false"
+                                         aria-controls="address-heading">
+
+                                        <span class="mb-0 card-title user-select-none">Shipping and Billing</span>
+
+                                        <button class="edit-btn btn btn-link d-none"
+                                                data-toggle="collapse"
+                                                data-target="#address-content"
+                                                aria-expanded="false"
+                                                aria-controls="address-content">edit</button>
+
+                                    </div><!-- END #address-heading -->
+
+                                    <div id="address-content"
+                                         class="card-content collapse"
+                                         aria-labelledby="heading-address"
+                                         data-parent="#order-steps">
+
+                                        <div class="card-body">
+                                            <div class="row">
+
+                                                <div id="shipping address"
+                                                     class="col-6">
+
+                                                    <form action=""
+                                                          data-sidebar="order-detail_shipping">
+                                                        <fieldset>
+                                                            <legend class="form-title">shipping address</legend>
+
+                                                            <div class="form-group">
+                                                                <label for="country">country / Region</label>
+                                                                <input type="text"
+                                                                       class="form-control"
+                                                                       id="country"
+                                                                       name="country"
+                                                                       placeholder="e.g. Hungary"
+                                                                       autocomplete="on">
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <label for="street-address">street address</label>
+                                                                <textarea type="text"
+                                                                          class="form-control"
+                                                                          id="street-address"
+                                                                          name="street-address"
+                                                                          placeholder="e.g. 34, Neverland str."
+                                                                          autocomplete="on"></textarea>
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <label for="city">City</label>
+                                                                <input type="text"
+                                                                       class="form-control"
+                                                                       id="city"
+                                                                       name="city"
+                                                                       placeholder="e.g. Budapest"
+                                                                       autocomplete="on">
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <label for="province">Province / County
+                                                                    <small class="text-muted">(Optional)</small>
+                                                                </label>
+                                                                <input type="text"
+                                                                       class="form-control"
+                                                                       id="province"
+                                                                       name="province"
+                                                                       placeholder="e.g. Budapest"
+                                                                       autocomplete="on">
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <label for="postal-code">postal code</label>
+                                                                <input type="text"
+                                                                       class="form-control"
+                                                                       id="postal-code"
+                                                                       name="postal-code"
+                                                                       placeholder="e.g. 1212"
+                                                                       autocomplete="on">
+                                                            </div>
+
+                                                            <hr>
+
+                                                            <div class="form-group">
+                                                                <label for="phone">
+                                                                    phone number
+                                                                    <small class="text-muted">(Optional)</small>
+                                                                </label>
+                                                                <span class="material-icons input-icon">info</span>
+                                                                <input type="tel"
+                                                                       class="form-control"
+                                                                       id="phone"
+                                                                       name="phone"
+                                                                       placeholder="e.g. +36702314568"
+                                                                       autocomplete="on">
+                                                            </div>
+                                                        </fieldset>
+                                                    </form>
+
+                                                    <div class="custom-control custom-checkbox mb-3">
+                                                        <input type="checkbox"
+                                                               class="custom-control-input"
+                                                               id="billingCheck"
+                                                               name="forBilling">
+                                                        <label class="custom-control-label"
+                                                               for="billingCheck">Billing using a different
+                                                            address</label>
+                                                    </div>
+                                                </div><!-- END #shipping address-->
+
+                                                <div id="billing-address"
+                                                     class="d-none col-6">
+
+                                                    <form action=""
+                                                          data-sidebar="order-detail_billing">
+
+                                                        <fieldset>
+                                                            <legend class="form-title">billing address</legend>
+
+                                                            <div class="form-group">
+                                                                <label for="name">
+                                                                    Full name / Company name
+                                                                </label>
+                                                                <input type="text"
+                                                                       class="form-control"
+                                                                       id="name"
+                                                                       name="name"
+                                                                       placeholder="e.g. MyBusiness Inc."
+                                                                       autocomplete="on">
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <label for="country">Country / Region</label>
+                                                                <input type="text"
+                                                                       class="form-control"
+                                                                       id="country"
+                                                                       name="country"
+                                                                       placeholder="e.g. Hungary"
+                                                                       autocomplete="on">
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <label for="street-address">street address</label>
+                                                                <textarea type="text"
+                                                                          class="form-control"
+                                                                          id="street-address"
+                                                                          name="street-address"
+                                                                          placeholder="e.g. 34, Neverland str."
+                                                                          autocomplete="on"></textarea>
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <label for="city">City</label>
+                                                                <input type="text"
+                                                                       class="form-control"
+                                                                       id="city"
+                                                                       name="city"
+                                                                       placeholder="e.g. Budapest"
+                                                                       autocomplete="on">
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <label for="province">Province/County</label>
+                                                                <input type="text"
+                                                                       class="form-control"
+                                                                       id="province"
+                                                                       name="province"
+                                                                       placeholder="e.g. Budapest"
+                                                                       autocomplete="on">
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <label for="postal-code">postal code</label>
+                                                                <input type="text"
+                                                                       class="form-control"
+                                                                       id="postal-code"
+                                                                       name="postal-code"
+                                                                       placeholder="e.g. 1212"
+                                                                       autocomplete="on">
+                                                            </div>
+                                                        </fieldset>
+                                                    </form>
+                                                </div><!-- END #billing-address-->
+
+                                                <div class="button-container col-12">
+                                                    <button type="submit"
+                                                            class="default-btn btn next"
+                                                            data-toggle="collapse"
+                                                            data-target="#payment-content"
+                                                            aria-expanded="false"
+                                                            aria-controls="payment-content">Next</button>
+                                                </div>
+                                            </div><!-- END .row -->
+                                        </div><!-- END .card-body -->
+                                    </div><!-- END #address-content -->
+                                </section><!-- END #order-step_address -->
+
+                                <!--
+                                    *****************
+                                    STEP 3 - Checkout
+                                    *****************
+                                -->
+                                <section id="order-step_payment"
+                                         class="card card-step">
+
+                                    <div id="payment-heading"
+                                         class="card-header disabled"
+                                         data-toggle=""
+                                         data-target="#payment-content"
+                                         aria-expanded="false"
+                                         aria-controls="payment-content">
+
+                                        <span class="mb-0 card-title user-select-none">Checkout</span>
+
+                                        <button class="edit-btn btn btn-link d-none"
+                                                data-toggle="collapse"
+                                                data-target="#payment-content"
+                                                aria-expanded="false"
+                                                aria-controls="payment-content">Edit</button>
+
+                                    </div><!-- END #payment-heading -->
+
+                                    <div id="payment-content"
+                                         class="card-content collapse"
+                                         aria-labelledby="payment-content"
+                                         data-parent="#order-steps">
+
+                                        <div class="card-body">
+                                            <div class="row">
+
+                                                <div id="order-summary"
+                                                     class="col-6">
+                                                    <legend class="form-title pb-3">my bag</legend>
+                                                    <div id="item-container">
+                                                        <button type="button"
+                                                                class="close"
+                                                                aria-label="remove">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                        <div class="row">
+
+                                                            <div id="img-container"
+                                                                 class="col-4">
+                                                                <img class="img-fluid"
+                                                                     src="image/wine.png">
+                                                            </div>
+
+                                                            <div id="details-container"
+                                                                 class="pr-0 col-8">
+
+                                                                <div class="details my-5">
+                                                                    <p class="mb-0">Iványi Zsófia</p>
+                                                                    <p class="type">Cabernet Franc Rose</p>
+                                                                </div>
+
+                                                                <div class="counter">
+                                                                    <div class="row">
+                                                                        <div class="col-7 px-0 ml-auto">
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-prepend">
+                                                                                    <button type="button"
+                                                                                            class="btn btn-number"
+                                                                                            disabled="disabled"
+                                                                                            data-type="minus"
+                                                                                            data-field="quant[1]">
+                                                                                        <i class="material-icons">remove</i>
+                                                                                    </button>
+                                                                                </span>
+                                                                                <input type="text"
+                                                                                       name="quant[1]"
+                                                                                       class="form-control input-number"
+                                                                                       value="1"
+                                                                                       min="1"
+                                                                                       max="10">
+                                                                                <span class="input-group-append">
+                                                                                    <button type="button"
+                                                                                            class="btn  btn-number"
+                                                                                            data-type="plus"
+                                                                                            data-field="quant[1]">
+                                                                                        <i
+                                                                                           class="material-icons">add</i>
+                                                                                    </button>
+                                                                                </span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div><!-- END .row -->
+                                                                </div><!-- END .counter -->
+                                                            </div><!-- END #details-container -->
+                                                        </div><!-- END .row -->
+                                                    </div><!-- item container END-->
+
+                                                    <hr class="solid">
+
+                                                    <div id="total-table"
+                                                         class="col-10 ml-auto pr-0">
+                                                        <table class="table table-borderless text-right">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th>Sub-total</th>
+                                                                    <td>€247.00</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>Shipping</th>
+                                                                    <td>Free</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>Total</th>
+                                                                    <td>€247.00</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div><!-- END #total-table -->
+                                                </div><!-- END #order-summary -->
+
+                                                <div id="payment"
+                                                     class="col-6">
+
+                                                    <legend class="form-title">
+                                                        choose a payment option
+                                                    </legend>
+
+                                                    <img id="accepted-cards"
+                                                         class="img-fluid col-7 pl-0 pt-2"
+                                                         src="image/accepted-card.png"
+                                                         alt="accepted card list">
+
+                                                    <div id="option-container">
+                                                        <div class="btn-group-toggle mx-0 row  py-4"
+                                                             data-toggle="buttons">
+
+                                                            <label class="btn option-btn"
+                                                                   data-toggle="collapse"
+                                                                   data-target="#payment-form"
+                                                                   aria-expanded="false"
+                                                                   aria-controls="payment-form">
+                                                                <input type="radio"
+                                                                       name="options"
+                                                                       id="creditCard"
+                                                                       autocomplete="off" />
+
+                                                                <i class="material-icons">credit_card</i>
+                                                                <span class="">Credit Card</span>
+                                                            </label>
+
+
+                                                            <label class="btn option-btn">
+                                                                <input type="radio"
+                                                                       name="options"
+                                                                       id="paypal"
+                                                                       autocomplete="off" />
+                                                                <img class="img-fluid"
+                                                                     src="image/paypal.png"
+                                                                     alt="Paypal logo">
+                                                            </label>
+
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- row END-->
+                                                    <form action=""
+                                                          id="payment-form"
+                                                          class="collapse"
+                                                          aria-labelledby="option-container">
+
+                                                        <fieldset>
+                                                            <div class="form-group">
+                                                                <label for="card-number">card number</label>
+                                                                <input class="form-control"
+                                                                       id="card-number"
+                                                                       name="card-number"
+                                                                       type="tel"
+                                                                       inputmode="numeric"
+                                                                       pattern="[0-9\s]{13,19}"
+                                                                       autocomplete="on"
+                                                                       maxlength="19"
+                                                                       placeholder="xxxx xxxx xxxx xxxx">
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <label for="name-on-card">name on card</label>
+                                                                <input type="text"
+                                                                       class="form-control"
+                                                                       id="name-on-card"
+                                                                       name="name-on-card"
+                                                                       placeholder="e.g. Lorenzo Lamas"
+                                                                       autocomplete="on">
+                                                            </div>
+
+                                                            <div class="row">
+                                                                <div class="form-group col-6">
+                                                                    <label for="card-number">Expiry Date</label>
+                                                                    <input type="text"
+                                                                           class="form-control"
+                                                                           id="card-number"
+                                                                           name="card-number"
+                                                                           placeholder="mm/yy">
+                                                                </div>
+
+                                                                <div class="form-group col-6">
+                                                                    <label for="card-number">security code</label>
+                                                                    <input type="text"
+                                                                           class="form-control"
+                                                                           id="card-number"
+                                                                           name="card-number"
+                                                                           placeholder="e.g. 022">
+                                                                </div>
+                                                            </div><!-- END .row -->
+                                                        </fieldset>
+                                                    </form>
+
+
+                                                    <button type="button"
+                                                            id="checkout-btn"
+                                                            class="btn mt-2"
+                                                            data-toggle="collapse"
+                                                            data-target="#collapseThree"
+                                                            aria-expanded="false"
+                                                            aria-controls="collapseThree">
+
+                                                        <i class="material-icons align-middle">lock</i>
+                                                        <span class="align-middle">Pay €247</span>
+                                                    </button>
+
+                                                </div><!-- END #payment -->
+                                            </div><!-- END .row -->
+                                        </div><!-- END .card-body -->
+                                    </div><!-- END #payment-content -->
+
+                                </section><!-- END #order-step_payment -->
+
+                            </div><!-- END #order-steps -->
+
+                        </div><!-- END #order-steps-container -->
+
+                        <aside id="order-details-container"
+                               class="col-3  px-0">
+                            <h4 class="details-title">Review your data</h4>
+
+                            <section class="details-section">
+                                <h6>personal details</h6>
+                                <ul id="order-detail_personal"></ul>
+
+                            </section>
+
+                            <section class="details-section">
+                                <h6>shipping address</h6>
+                                <ul id="order-detail_shipping"></ul>
+
+                            </section>
+
+                            <section class="details-section">
+                                <h6>billing address</h6>
+                                <ul id="order-detail_billing"></ul>
+                            </section>
+
+
+
+                        </aside><!-- END "order-details-container -->
+
+                    </div><!-- END .row  -->
+                </div><!-- END #order-content -->
+            </section><!-- END #order -->
+
+        </div><!-- END #main-row -->
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+            integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+            crossorigin="anonymous"></script>
+    <script src="js/main.js"
+            async
+            defer></script>
+</body>
+
+</html>

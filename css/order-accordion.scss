@@ -1,0 +1,221 @@
+@use "init"as i;
+@use "mixins"as m;
+
+//----------------------- GLOBAL RULES---------------------------//
+
+.form-control {
+    background-color: transparent;
+    border-color: i.$mid-gray;
+    color: i.$font-dark;
+    font-size: i.$small;
+
+    &:focus {
+        border-color: i.$states;
+        box-shadow: 0 0 0 0.2rem transparentize(i.$states, 0.5);
+    }
+
+    &::placeholder {
+        color: i.$dark-gray;
+        font-size: i.$small;
+    }
+}
+
+.input-icon {
+    position: absolute;
+    display: block !important;
+    width: i.$small;
+    height: i.$small;
+    text-align: center;
+    color: i.$mid-gray;
+    right: 2.2rem;
+    padding: .375rem .75rem;
+}
+
+label {
+    font-size: i.$normal;
+    font-weight: i.$bold;
+    margin-bottom: i.$label-margin;
+
+    &::first-letter {
+        text-transform: uppercase;
+    }
+}
+
+.custom-control {
+    .custom-control-input {
+        &:checked~.custom-control-label {
+            &:before {
+                background-color: i.$accent;
+            }
+        }
+
+        &:active~.custom-control-label {
+            &:before {
+                background-color: i.$accent;
+            }
+        }
+
+        &:focus~.custom-control-label {
+            &:before {
+                box-shadow: 0 0 0 0.2rem transparentize(i.$states, 0.5);
+            }
+        }
+    }
+}
+
+//----------------------- ACCORDION - CARD- CONTENT ---------------------------//
+
+.card {
+    margin: i.$card-margin;
+
+    &-header {
+        border: 1px solid #ffffff;
+        background-color: #fefefe;
+        @include m.border-radius;
+        @include m.box-shadow;
+        @include m.title-style(active);
+
+        &.disabled {
+            @include m.title-style(disabled);
+        }
+
+        .edit-btn {
+            float: right;
+            color: i.$accent;
+            font-weight: i.$semibold;
+            text-decoration: underline;
+            padding: 0;
+
+            &:hover {
+                color: i.$states;
+            }
+        }
+    }
+
+    &-step {
+        border: none;
+        background-color: i.$base;
+    }
+}
+
+.form-title {
+    font-size: i.$medium;
+    font-weight: i.$semibold;
+
+    &::first-letter {
+        text-transform: uppercase;
+    }
+}
+
+.button-container {
+    height: 4.2rem;
+
+    .default-btn {
+        @include m.border-default-btn;
+        position: absolute;
+        bottom: 0;
+        right: 1.25rem;
+
+        @include m.btn-style(accent);
+    }
+}
+
+//----------------------- CHECKOUT ---------------------------//
+
+#order-summary {
+    padding: 0 2rem 0 1rem;
+
+    hr {
+        margin-bottom: 0;
+    }
+}
+
+.counter {
+    .input-group {
+        border: 1px solid i.$mid-gray;
+    }
+
+    .btn-number {
+        i {
+            font-size: i.$normal;
+            vertical-align: middle;
+        }
+    }
+
+    .input-number {
+        text-align: center;
+        font-weight: i.$bold;
+        border: none;
+    }
+}
+
+#total-table {
+    margin-right: -15px;
+    color: i.$font-dark;
+
+    th {
+        font-weight: i.$regular;
+    }
+
+    td {
+        font-weight: i.$semibold;
+    }
+
+    tr {
+        &:nth-child(2) {
+            border-bottom: 1px solid i.$mid-gray;
+        }
+
+        &:last-child {
+
+            td,
+            th {
+                font-weight: i.$bold;
+                font-size: i.$large;
+                color: i.$font-dark;
+            }
+        }
+    }
+}
+
+.btn-group-toggle {
+    padding-left: 0;
+}
+
+.option-btn {
+    padding: .75rem .75rem;
+    width: 10rem;
+    border: 1px solid #ddd;
+    font-size: i.$normal;
+    font-weight: i.$semibold;
+    line-height: i.$normal;
+    margin-right: 0.5rem;
+
+    i {
+        position: relative;
+        top: 6px;
+    }
+
+    &:hover {
+        box-shadow: 0 0 0 0.2rem transparentize(i.$states, 0.5);
+        color: i.$accent;
+    }
+
+    &.focus {
+        box-shadow: 0 0 0 0.2rem transparentize(i.$states, 0.5);
+    }
+
+    &.active {
+        box-shadow: 0 0 0 0.2rem i.$accent;
+        color: i.$accent;
+    }
+}
+
+#checkout-btn {
+    @include m.btn-style(checkout);
+    padding: 0.8rem;
+
+    i {
+        font-size: 1.4rem;
+    }
+}

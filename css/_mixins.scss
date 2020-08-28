@@ -1,0 +1,94 @@
+@use "init"as i;
+
+@mixin box-shadow {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.13);
+}
+
+@mixin border-radius {
+    border-radius: i.$radius;
+}
+
+@mixin border-accordion {
+    border: 1px solid i.$font-light;
+}
+
+@mixin border-default-btn {
+    border: 1px solid i.$accent-dark;
+}
+
+@mixin counter($weight, $titleColor, $stepColor, $background, $borderColor) {
+    font: {
+        size: i.$medium;
+        weight: $weight;
+    }
+
+    color: $titleColor;
+    line-height:normal;
+
+    &:before {
+        counter-increment: step;
+        content: counter(step);
+        width: 2rem;
+        height: 2rem;
+        display: inline-flex;
+        border-radius: 1rem;
+        margin-right: 1rem;
+        border: 1px solid $borderColor;
+        font-weight: $weight;
+        background-color: $background;
+        color: $stepColor;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@mixin title-style ($type) {
+    @if $type==active {
+
+        &[aria-expanded="true"] {
+            .card-title {
+                @include counter(i.$bold, i.$font-dark, i.$font-light, i.$accent, i.$accent);
+            }
+        }
+
+        &[aria-expanded="false"] {
+            .card-title {
+                @include counter(i.$normal, i.$font-dark, i.$font-dark, i.$font-light, i.$accent);
+            }
+        }
+
+    }
+
+    @if $type==disabled {
+        .card-title {
+            @include counter(i.$normal, i.$dark-gray, i.$dark-gray, i.$font-light, i.$dark-gray);
+        }
+    }
+}
+
+@mixin filled-btn($bgColor, $color, $f-size, $f-weight, $width) {
+    background-color: $bgColor;
+    color: $color;
+    font-size: $f-size;
+    font-weight: $f-weight;
+    width: $width;
+    @include box-shadow;
+}
+
+@mixin btn-style($type) {
+    @if $type==accent {
+        @include filled-btn(i.$accent, i.$font-light, i.$normal, i.$semibold, 7rem);
+
+        &:hover {
+            background-color: desaturate(i.$states, 10%);
+        }
+    }
+
+    @if $type==checkout {
+        @include filled-btn(i.$states, i.$font-light, i.$normal, i.$semibold, 100%);
+
+        &:hover {
+            background-color: darken(i.$states, 15%);
+        }
+    }
+}

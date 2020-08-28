@@ -1,0 +1,40 @@
+@use "init" as i;
+@use "mixins" as m;
+
+#order-details-container {
+    @include m.border-radius;
+    @include m.box-shadow;
+    height: 65vh;
+
+    .details-title {
+        padding: 1.25rem 0 0 1.25rem;
+    }
+
+    .details-section {
+        padding: 1.25rem;
+        border-bottom: 0.75px solid i.$mid-gray;
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+        h6 {
+            margin: 0;
+            padding: 0.5rem 0;
+
+            &::first-letter {
+                text-transform: uppercase;
+            }
+        }
+
+        ul {
+            padding-left: 0.3rem;
+            margin: 0;
+            font-size: i.$small;
+
+            li {
+                list-style-type: none;
+            }
+        }
+    }
+}

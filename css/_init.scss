@@ -1,0 +1,42 @@
+/* Used Font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+$font-type:'Montserrat',
+sans-serif;
+
+/* Used Color List */
+$primary:#915D66;
+$accent:#623F45;
+$accent-dark:#4E3237; // for border 
+$states:#845d91;
+$font-dark:#404040;
+$font-light:#FeFeFe;
+$dark-gray:#a4a4a4; // for input placeholder
+$mid-gray:#d3d3d3;
+$light-gray:#f8f8f8;
+$base:#FCFCFC;
+
+$primary-tetradic:#915d91; // for checkout
+
+/* Padding - Margin size */
+$label-margin: 0;
+$card-margin:0 0 .5rem 0;
+
+$content-spacing:5rem 0 0 0;
+$radius:0.3125rem;
+
+/* Font-size */
+$default-size:16px;
+$small:0.875rem; //14px
+$normal:1rem;
+$medium:1.25rem; //20px
+$large:1.5rem; //25px
+$extra-large:2rem; //35px
+$super-large:2.5rem; //45px
+
+/* Font-weight */
+$regular:400;
+$semibold:500;
+$bold:600;
+$extra-bold:700;

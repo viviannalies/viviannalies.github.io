@@ -1,0 +1,37 @@
+/* Used Font */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+/* Used Color List */
+/* Padding - Margin size */
+/* Font-size */
+/* Font-weight */
+#order-details-container {
+  border-radius: 0.3125rem;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.13);
+  height: 65vh;
+}
+#order-details-container .details-title {
+  padding: 1.25rem 0 0 1.25rem;
+}
+#order-details-container .details-section {
+  padding: 1.25rem;
+  border-bottom: 0.75px solid #d3d3d3;
+}
+#order-details-container .details-section:last-child {
+  border-bottom: none;
+}
+#order-details-container .details-section h6 {
+  margin: 0;
+  padding: 0.5rem 0;
+}
+#order-details-container .details-section h6::first-letter {
+  text-transform: uppercase;
+}
+#order-details-container .details-section ul {
+  padding-left: 0.3rem;
+  margin: 0;
+  font-size: 0.875rem;
+}
+#order-details-container .details-section ul li {
+  list-style-type: none;
+}

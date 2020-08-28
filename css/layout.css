@@ -1,0 +1,110 @@
+/* Used Font */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+/* Used Color List */
+/* Padding - Margin size */
+/* Font-size */
+/* Font-weight */
+:root {
+  height: 100%;
+  font-size: 16px;
+  overflow-y: scroll;
+}
+
+body {
+  color: #404040;
+  font-family: "Montserrat", sans-serif;
+  background-color: #FCFCFC;
+  counter-reset: step;
+}
+body h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+body h2 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+body h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+body h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+body h5 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+button::first-letter {
+  text-transform: uppercase;
+}
+
+#mr-fox {
+  position: absolute;
+  bottom: 0;
+  width: 450px;
+}
+
+#brand {
+  height: 100vh;
+  background-color: #915D66;
+  position: fixed;
+  text-align: center;
+  color: #FeFeFe;
+}
+#brand .navbar-brand {
+  border: 1px solid #fefefe;
+  margin-bottom: 6rem;
+}
+#brand-head {
+  padding: 5rem 0 0 0;
+}
+#brand-head h1 {
+  text-transform: capitalize;
+}
+#brand-head h4 {
+  font-weight: 400;
+}
+
+#order-content {
+  padding: 5rem 0 0 0;
+}
+
+#order-header {
+  padding-bottom: 2rem;
+}
+#order-header #order-cart {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.13);
+  border-radius: 0.3125rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: #FeFeFe;
+  width: 8rem;
+  text-align: left;
+  padding: 0.5rem 0.5rem 0.5rem 0.7rem;
+}
+#order-header #order-cart .item-number {
+  font-size: 1rem;
+  font-weight: 600;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  border: 1px solid #623F45;
+  display: inline-block;
+  text-align: center;
+}
+#order-header #order-cart i {
+  font-size: 1.5rem;
+}
+#order-header #order-cart .cart {
+  color: #623F45;
+}
+#order-header #order-cart .expander {
+  text-align: right;
+  position: absolute;
+  right: 0.5rem;
+}

@@ -1,0 +1,123 @@
+@use "init"as i;
+@use "mixins"as m;
+
+:root {
+    height: 100%;
+    font-size: i.$default-size;
+    overflow-y: scroll;
+}
+
+body {
+    color: i.$font-dark;
+    font-family: i.$font-type;
+    background-color: i.$base;
+    counter-reset: step;
+
+    h1 {
+
+        font-size: i.$super-large;
+        font-weight: i.$extra-bold;
+    }
+
+    h2 {
+        font-size: i.$extra-large;
+        font-weight: i.$bold;
+    }
+
+    h3 {
+        font-size: i.$large;
+        font-weight: i.$bold;
+    }
+
+    h4 {
+        font-size: i.$medium;
+        font-weight: i.$bold;
+    }
+
+    h5 {
+        font-size: i.$normal;
+        font-weight: i.$semibold;
+    }
+}
+
+button {
+    &::first-letter {
+        text-transform: uppercase;
+    }
+}
+
+#mr-fox {
+    position: absolute;
+    bottom: 0;
+    width: 450px;
+}
+
+#brand {
+    height: 100vh;
+    background-color: i.$primary;
+    position: fixed;
+    text-align: center;
+    color: i.$font-light;
+
+    .navbar-brand {
+        border: 1px solid #fefefe;
+        margin-bottom: 6rem;
+    }
+
+    &-head {
+        padding: i.$content-spacing;
+
+        h1 {
+            text-transform: capitalize;
+        }
+
+        h4 {
+            font-weight: i.$regular;
+        }
+    }
+}
+
+#order-content {
+    padding: i.$content-spacing;
+}
+
+#order-header {
+    padding-bottom: 2rem;
+
+    #order-cart {
+        @include m.box-shadow;
+        @include m.border-radius;
+        position: absolute;
+        right: 0;
+        top: 0;
+        background-color: i.$font-light;
+        width: 8rem;
+        text-align: left;
+        padding: 0.5rem 0.5rem 0.5rem 0.7rem;
+
+        .item-number {
+            font-size: i.$normal;
+            font-weight: i.$bold;
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 50%;
+            border: 1px solid i.$accent;
+            display: inline-block;
+            text-align: center;
+        }
+
+        i {
+            font-size: i.$large;
+        }
+
+        .cart {
+            color: i.$accent;
+        }
+
+        .expander {
+            text-align: right;
+            position: absolute;
+            right: 0.5rem;
+        }
+    }
+}
